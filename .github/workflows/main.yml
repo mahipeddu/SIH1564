@@ -16,7 +16,7 @@ jobs:
     - name: Inject Secret into HTML
       run: |
         echo "Injecting secret into HTML"
-        sed -i 's|MAPS|${{ secrets.MAP_API }}|' ./index.html
+        sed -i 's|MAPS|${{ secrets.MAP_KEY }}|' ./index.html
 
     - name: Display the modified HTML
       run: cat ./index.html
